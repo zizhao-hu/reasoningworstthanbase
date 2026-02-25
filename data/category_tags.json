@@ -1,0 +1,66 @@
+{
+  "categories": {
+    "math": {
+      "description": "Mathematical reasoning and problem solving",
+      "benchmarks": ["MATH", "MATH-500", "GSM8K", "AIME 2024", "MathVista"],
+      "hypothesis": "thinking_helps"
+    },
+    "reasoning": {
+      "description": "Graduate-level reasoning and scientific thinking",
+      "benchmarks": ["GPQA", "GPQA Diamond", "ARC-Challenge", "BBH"],
+      "hypothesis": "thinking_helps"
+    },
+    "code": {
+      "description": "Code generation and software engineering",
+      "benchmarks": ["HumanEval", "MBPP", "LiveCodeBench", "SWE-bench Verified", "Codeforces"],
+      "hypothesis": "thinking_helps_complex_hurts_simple"
+    },
+    "knowledge": {
+      "description": "Factual knowledge and language understanding",
+      "benchmarks": ["MMLU", "MMLU-Pro", "TriviaQA"],
+      "hypothesis": "thinking_neutral_or_hurts"
+    },
+    "commonsense": {
+      "description": "Commonsense and intuitive reasoning",
+      "benchmarks": ["HellaSwag", "WinoGrande", "PIQA"],
+      "hypothesis": "thinking_hurts"
+    },
+    "instruction_following": {
+      "description": "Following instructions precisely",
+      "benchmarks": ["IFEval"],
+      "hypothesis": "thinking_hurts"
+    },
+    "creative": {
+      "description": "Open-ended generation and conversation",
+      "benchmarks": ["AlpacaEval", "MT-Bench", "Arena-Hard"],
+      "hypothesis": "mixed"
+    },
+    "safety": {
+      "description": "Truthfulness and safety",
+      "benchmarks": ["TruthfulQA"],
+      "hypothesis": "unknown"
+    },
+    "multimodal": {
+      "description": "Multimodal understanding tasks",
+      "benchmarks": ["MMMU", "MathVista", "AI2D"],
+      "hypothesis": "thinking_helps"
+    }
+  },
+  "related_work": {
+    "OptimalThinkingBench": {
+      "arxiv": "2025",
+      "finding": "Thinking models generate 700+ tokens on simple tasks with no accuracy gain, sometimes accuracy drops",
+      "relevance": "high"
+    },
+    "overthinking_deepseek_r1": {
+      "source": "the-decoder.com",
+      "finding": "DeepSeek-R1 generates ~300 more reasoning tokens for simple squaring vs complex tasks, with lower accuracy on the simple task",
+      "relevance": "high"
+    },
+    "apple_reasoning_study": {
+      "source": "Apple 2025",
+      "finding": "Complete accuracy collapse in reasoning models on highly complex tasks; overthinking on simple ones",
+      "relevance": "high"
+    }
+  }
+}
